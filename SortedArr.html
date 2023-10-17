@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting in descending order</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+
+
+    <script>
+        /* 
+   
+          // initialize of an array
+         const arr = [12,45,23,67,84];
+         console.log("Unsorted Array: "+arr);
+   
+           // using predefined method
+       const sorted_arr =  arr.sort((a,b) => b - a);
+       console.log("Sorted Array in Descending order:"+sorted_arr);
+   
+           */
+
+        // creating a function to sort an arr in descending.
+
+        const arr = [12, 45, 23, 67, 84];
+        console.log("Unsorted Array: "+arr);
+
+        function dSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[j] < arr[j + 1]) {
+                        const temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        dSort(arr);
+        console.log("Sorted Array: "+arr);
+
+    </script>
+</body>
+
+</html>

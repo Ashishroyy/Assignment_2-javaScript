@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse sentence</title>
+</head>
+
+<body>
+    <div id="demo" style="text-align: center; font-size: 30px; color: skyblue;border-top: 5px solid black;"></div>
+    <script>
+        // creating reverse method
+        function reverseWords(sentence) {
+
+            // split sentence into words
+            let converted_words = sentence.split(' ');
+
+            const reversedWords = converted_words.map(words => {
+                return words.split('').reverse('').join('');
+            })
+
+            // convert words into senetence
+            const reverseSentence = reversedWords.join(' ');
+            return reverseSentence;
+        }
+
+        // take a sentence as an input and calling method
+        const original_sentence = "Everything is javaScript";
+        // console.log(reverseWords(original_sentence));
+        document.getElementById("demo").innerHTML = reverseWords(original_sentence);
+
+
+    </script>
+</body>
+
+</html>
